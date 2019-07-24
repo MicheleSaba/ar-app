@@ -16,11 +16,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    // You need to add the `isArEnabled` & `arTrackingConfiguration` props.
-    // `isArRunningStateEnabled` Will show us the play/pause button in the corner.
-    // `isArCameraStateEnabled` Will render the camera tracking information on the screen.
-    // `arTrackingConfiguration` denotes which camera the AR Session will use.
-    // World for rear, Face for front (iPhone X only)
     return (
       <GraphicsView
         style={{ flex: 1 }}
@@ -64,7 +59,7 @@ export default class App extends React.Component {
       color: 0x820082,
     });
 
-    this.cube = new THREE.Mesh(geometry, material, texture);
+    this.cube = new THREE.Mesh(geometry, material);
 
     // Place the box 0.4 meters in front of us.
     this.cube.position.z = -0.4;
